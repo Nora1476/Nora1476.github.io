@@ -56,7 +56,7 @@
   </head>
   <body>
     <h1>Snack Arcade 개인정보처리방침</h1>
-    <p class="updated">시행일: 2026년 8월 7일</p>
+    <p class="updated">시행일: 2026년 8월 20일</p>
 
     <p>
       Snack Arcade(이하 "앱")는 이용자의 개인정보를 중요하게 생각하며,
@@ -91,6 +91,16 @@
         <td>광고 식별자(ADID), 기기 정보(모델, OS 버전 등)</td>
         <td>광고 표시 시 Google AdMob이 자동 수집</td>
       </tr>
+      <tr>
+        <td>진단 정보</td>
+        <td>
+          비정상 종료 로그, 앱 성능·진단 데이터, 기기 정보(모델, OS 버전),
+          설치 식별자
+        </td>
+        <td>
+          앱 오류 발생 시 Firebase Crashlytics가 자동 수집(최대 90일 보관)
+        </td>
+      </tr>
     </table>
     <p>
       게스트(비로그인)로 이용하는 경우 계정 정보는 수집되지 않으며, 플레이
@@ -103,6 +113,7 @@
       <li>플레이 기록·최고 점수 저장 및 친구(맞팔로우) 간 기록 공유</li>
       <li>친구 코드 기반 팔로우 기능 제공</li>
       <li>보상형 광고 제공 (Google AdMob)</li>
+      <li>앱 오류·비정상 종료 원인 파악 및 안정성 개선</li>
     </ul>
 
     <h2>3. 개인정보의 처리 위탁 및 제3자 제공</h2>
@@ -122,6 +133,15 @@
           Cloud Storage)
         </td>
         <td>계정 인증, 데이터 저장</td>
+        <td>
+          <a href="https://firebase.google.com/support/privacy"
+            >firebase.google.com/support/privacy</a
+          >
+        </td>
+      </tr>
+      <tr>
+        <td>Google Firebase Crashlytics</td>
+        <td>오류·비정상 종료 진단</td>
         <td>
           <a href="https://firebase.google.com/support/privacy"
             >firebase.google.com/support/privacy</a
@@ -173,13 +193,22 @@
         탈퇴 시 계정 정보, 플레이 기록, 팔로우 관계, 프로필 사진이 서버에서 영구
         삭제되며 복구할 수 없습니다.
       </li>
+      <li>
+        진단 정보(비정상 종료 로그)는 계정과 연결되지 않으며, 수집일로부터 최대
+        90일 후 자동 삭제됩니다.
+      </li>
     </ul>
 
-    <h2>5. 계정 및 데이터 삭제 방법</h2>
+    <h2 id="delete">5. 계정 및 데이터 삭제 방법</h2>
     <p>
       앱 내 <strong>설정 → 회원 탈퇴</strong>에서 직접 계정과 모든 데이터를
-      삭제할 수 있습니다. 앱을 삭제한 경우 등 앱 내 탈퇴가 어려운 경우, 아래
-      연락처로 삭제를 요청하면 지체 없이 처리합니다.
+      삭제할 수 있습니다. 탈퇴 시 계정 정보, 플레이 기록, 팔로우 관계, 프로필
+      사진이 즉시 영구 삭제됩니다.
+    </p>
+    <p>
+      앱을 이미 삭제한 경우 등 앱 내 탈퇴가 어려우면
+      <strong>nada70979@gmail.com</strong>으로 가입에 사용한 소셜 계정 정보를
+      알려주시면 확인 후 30일 이내에 삭제 처리합니다.
     </p>
 
     <h2>6. 이용자의 권리</h2>
@@ -201,12 +230,12 @@
     </p>
 
     <h2>9. 문의처</h2>
-    <p>개인정보 관련 문의: <strong>[nada70979@gmail.com]</strong></p>
+    <p>개인정보 관련 문의: <strong>nada70979@gmail.com</strong></p>
 
     <div class="divider"></div>
 
     <h1>Snack Arcade Privacy Policy</h1>
-    <p class="updated">Effective date: August 7, 2026</p>
+    <p class="updated">Effective date: August 20, 2026</p>
 
     <p>
       Snack Arcade ("the app") respects your privacy. This policy explains what
@@ -241,6 +270,17 @@
         <td>Advertising ID (ADID), device information (model, OS version)</td>
         <td>Collected automatically by Google AdMob when ads are shown</td>
       </tr>
+      <tr>
+        <td>Diagnostics</td>
+        <td>
+          Crash logs, app performance and diagnostic data, device information
+          (model, OS version), installation identifier
+        </td>
+        <td>
+          Collected automatically by Firebase Crashlytics when an error occurs
+          (retained for up to 90 days)
+        </td>
+      </tr>
     </table>
     <p>
       If you use the app as a guest (without signing in), no account information
@@ -256,14 +296,15 @@
       </li>
       <li>Providing the friend-code based follow feature</li>
       <li>Serving rewarded ads (Google AdMob)</li>
+      <li>Diagnosing crashes and improving app stability</li>
     </ul>
 
     <h2>3. Third-Party Services</h2>
     <p>
       The app uses the following services, whose privacy policies also apply:
       Google Firebase (Authentication, Cloud Firestore, Cloud Functions, Cloud
-      Storage), Google AdMob, Kakao Login, Naver Login, and Google Sign-In.
-      Links are provided in the Korean section above.
+      Storage, Crashlytics), Google AdMob, Kakao Login, Naver Login, and Google
+      Sign-In. Links are provided in the Korean section above.
     </p>
 
     <h2>4. Data Retention and Deletion</h2>
@@ -272,15 +313,22 @@
       <strong
         >permanently deleted immediately when you delete your account</strong
       >. This includes account information, play records, follow relationships,
-      and profile photo, and cannot be recovered.
+      and profile photo, and cannot be recovered. Diagnostic data (crash logs)
+      is not linked to your account and is deleted automatically within 90 days
+      of collection.
     </p>
 
-    <h2>5. How to Delete Your Account and Data</h2>
+    <h2 id="delete-en">5. How to Delete Your Account and Data</h2>
     <p>
       You can delete your account and all data directly in the app via
-      <strong>Settings → Delete account</strong>. If you cannot use the in-app
-      option (e.g., the app is uninstalled), contact us below and we will
-      process your request promptly.
+      <strong>Settings → Delete account</strong>. Account information, play
+      records, follow relationships, and your profile photo are permanently
+      deleted immediately.
+    </p>
+    <p>
+      If you cannot use the in-app option (for example, the app is already
+      uninstalled), email <strong>nada70979@gmail.com</strong> with the social
+      account you signed up with and we will delete your data within 30 days.
     </p>
 
     <h2>6. Your Rights</h2>
@@ -302,6 +350,6 @@
     </p>
 
     <h2>9. Contact</h2>
-    <p>Privacy inquiries: <strong>[nada70979@gmail.com]</strong></p>
+    <p>Privacy inquiries: <strong>nada70979@gmail.com</strong></p>
   </body>
 </html>
